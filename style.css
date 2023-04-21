@@ -1,28 +1,91 @@
-/* * {
+* {
     margin: 0;
     padding: 0;
+    box-sizing: 0;
+}   
+
+section .container {
+    width: 100%;
+   
 }
 
-header {
+.menu {
     align-items: center;
-    display: grid;
-    grid-template-columns: 1fr auto;
-    background-color: gray;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
     height: 10vh;
-    padding: 0 2%;
+    padding: 2rem 0;
+    position: fixed;
+    width: 100%;
+
 }
 
-
-main aside {
-    background-color: gray;
+.menu ul {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 2rem;
 }
 
+.menu li {
+    list-style: none;
+    margin-left: 30px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.5rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.logo {
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    margin-left: 2rem;
+}
+
+main .imagem-principal {
+    height: 55%;
+    width: 100%;
+}
+
+main .frase-principal {
+    font-size: 2.6rem;
+    font-weight: 500;
+    margin: 2rem 0;
+    text-align: center;
+}
+
+main .carrossel{
+    display: grid;
+    padding: 10px;
+    gap: 300px;
+    grid-template-columns: repeat(auto-fit, 200px) ;
+    justify-content: center;
+    align-items: center;
+    margin: 100px;
+    
+}
+main .carrossel img {
+    width: 450px;
+    height: 400px;
+    
+}
 
 footer {
-    align-items: center;
-    justify-items: center;
+    
     background-color: black;
-    height: 10vh;
-    display: grid;
-    grid-template-columns: 1fr;
-} */
+    height: 150px;
+}
+
+footer a {
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+}
