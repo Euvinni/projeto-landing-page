@@ -20,9 +20,9 @@ section .container {
   justify-content: space-between;
   height: 5vh;
   padding: 2rem 0;
-
   width: 100%;
 }
+
 .cabecario ul {
   align-items: center;
   display: flex;
@@ -285,7 +285,7 @@ input#img-6:checked ~ .carousel-dots label#img-dot-6 {
   list-style: none;
 }
 
-.footer-col ul li a {
+.footer-col a {
   font-size: 16px;
   color: purple;
   text-decoration: none;
@@ -293,18 +293,203 @@ input#img-6:checked ~ .carousel-dots label#img-dot-6 {
   transition: all 0.2s ease;
 }
 
-.footer-col ul li a:hover {
+.footer-col a:hover {
   color: white;
   padding-left: 10px;
 }
 
-.footer-col .social-links a {
-  display: inline-block;
-  text-decoration: none;
-  height: 40px;
-  width: 40px;
-  background-color: lightpink;
-  text-align: center;
+#copy {
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.social-links .footer-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2.5rem;
+  width: 2.5rem;
   border-radius: 50%;
-  color: white;
+  transition: all 0.3s;
+  background-color: black;
+}
+
+.footer-link:hover {
+  opacity: 0.8;
+}
+
+.footer-dev span {
+  text-decoration: none;
+}
+
+@media screen and (min-width: 800px) and (max-width: 1280px) {
+  .logo {
+    height: 15vh;
+    width: 9vw;
+    object-fit: cover;
+    margin-left: 1rem;
+  }
+
+  .conteudo-1 {
+    flex-direction: column;
+    width: 100%;
+    gap: 5rem;
+  }
+
+  .frase-principal-1 {
+    font-size: 2.2rem;
+    font-family: sans-serif 50px;
+    font-weight: 500;
+    width: 70%;
+  }
+  .imagem-conteudo img {
+    width: 38rem;
+    height: 30rem;
+    object-fit: cover;
+    border-radius: 3%;
+  }
+  .formulario {
+    margin: 60px 5rem;
+    padding: 3rem;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    gap: 1.4rem;
+    background-color: lightgray;
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.5);
+  }
+  #copy {
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    margin-top: 7rem;
+  }
+}
+
+@media screen and (min-width: 370px) and (max-width: 880px) {
+  .container {
+    width: 320vw;
+  }
+
+  .menu {
+    background-image: linear-gradient(to left, #614230, #e2ddda, #fff, #fff);
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    height: 24vh;
+    padding: 2rem 0;
+    width: 100%;
+  }
+  .logo {
+    height: 35vh;
+    width: 45vw;
+    object-fit: cover;
+    margin-left: 1rem;
+  }
+
+  .menu a {
+    text-decoration: none;
+    color: black;
+    font-size: 2.5rem;
+    font-weight: 500;
+    cursor: pointer;
+  }
+
+  main .frase-primaria {
+    font-size: 4.6rem;
+    font-family: sans-serif;
+    font-weight: 500;
+    margin: 5rem 0;
+    text-align: center;
+  }
+
+  .conteudo-1 {
+    flex-direction: column;
+    width: 100%;
+    gap: 5rem;
+  }
+
+  .frase-principal-1 {
+    font-size: 3rem;
+    font-family: sans-serif 50px;
+    font-weight: 500;
+    text-align: center;
+    width: 86%;
+    height: 50%;
+  }
+
+  .imagem-conteudo img {
+    width: 47rem;
+    height: 34rem;
+    object-fit: cover;
+    border-radius: 3%;
+  }
+
+  .formulario {
+    margin: 78px 2rem;
+    padding: 6rem;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    gap: 1rem;
+    background-color: lightgray;
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.5);
+  }
+
+  .formulario label {
+    font-size: 25px;
+  }
+
+  .formulario input {
+    font-size: 20px;
+    width: 20rem;
+    height: 2rem;
+  }
+
+  .footer-col {
+    width: 29%;
+    padding: 0 20px;
+  }
+
+  .footer-col h3 {
+    font-size: 25px;
+    color: black;
+    text-transform: uppercase;
+    margin-bottom: 1.2rem;
+  }
+  .footer-col a {
+    font-size: 24px;
+    color: purple;
+    text-decoration: none;
+    display: block;
+    transition: all 0.2s ease;
+  }
+
+  #copy {
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    margin-top: 15rem;
+  }
+
+  .social-links .footer-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+    transition: all 0.3s;
+    background-color: black;
+  }
 }
