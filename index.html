@@ -6,64 +6,202 @@
     <meta name="viewport" content="width=device-width" />
     <link rel="stylesheet" href="style.css" />
     <script type="module" src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
   <body>
     <section class="container">
-      <header class="menu">
+      <header id="header" class="menu sub-menu">
         <figure>
-          <img class="logo" src="./assets/logo.png" alt="Logo do header">
+          <img
+            class="logo"
+            src="./assets/imagens/logo.png"
+            alt="Logo do header"
+          />
         </figure>
-        
-     <nav>
-      <ul>
-        <li><a href="">Conheça-nos</a></li>
-        <li><a href="">Supermarket</a></li>
-        <li><a href="">Comidas prontas</a></li>
-        <li><a href="">Promoções</a></li>
-      </ul>
-     </nav>
-     </header>
 
-     <main>
-      <figure>
-        <img class= "imagem-principal"src="./assets/Logoprincipal.jpg" alt="Imagem chamativa">
-      </figure>
-      <aside>
-        <p class= "frase-principal">Sua saúde importa pra nós</p>
-      </aside>
-      <section class="carrossel">
-        <figure>
-          <img src="./assets/imagem1.jpg" alt="Imagem 1">
-        </figure>
-        <figure>
-          <img src="./assets/imagem2.jpg" alt="Imagem 2">
-        </figure>
-        <figure>
-          <img src="./assets/imagem3.jpg" alt="Imagem 3">
-        </figure>
-        <figure>
-          <img src="./assets/imagem4.jpg" alt="Imagem 4">
-        </figure>
-        <figure>
-          <img src="./assets/imagem5.jpg" alt="Imagem 5">
-        </figure>
-      </section>  
-      
-      <aside>
-        <p>Conteúdo</p>
-      </aside>
+        <nav class="cabecario">
+          <ul>
+            <li><a href="#cadastro">Conheça-nos</a></li>
+            <li><a href="#market">Supermarket</a></li>
+            <li><a href="#market">Comidas prontas</a></li>
+            <li><a href="#cadastro">Cadastre-se</a></li>
+          </ul>
+        </nav>
+      </header>
 
-     </main>
-     <footer>
-      <nav>
-        <ul>
-          <li><a href="">Central de atendimento</a></li>
-          <li><a href="">Baixe nosso app</a></li>
-          <li><a href="">Nos avalie</a></li>
-          <li><a href="">Nossas redes</a></li>
-        </ul>
-       </nav>
-    </footer>
+      <main>
+        <figure>
+          <img
+            class="imagem-principal"
+            src="./assets/imagens/Logoprincipal.jpg"
+            alt="Imagem chamativa"
+          />
+        </figure>
+        <aside>
+          <p class="frase-primaria">Sua saúde importa pra nós!</p>
+        </aside>
+        <!--Section do carrosel-->
+        <section id="market" class="container-carrousel">
+          <div class="carousel">
+            <ul class="slides">
+              <input type="radio" name="radio-buttom" id="img-1" checked />
+              <li class="slide-container">
+                <div class="slide-image">
+                  <img src="./assets/imagens/imagem1.jpg" />
+                </div>
+                <div class="carousel-controls">
+                  <label for="img-6" class="prev-slide">
+                    <span>&lsaquo;</span>
+                  </label>
+                  <label for="img-2" class="next-slide">
+                    <span>&rsaquo;</span>
+                  </label>
+                </div>
+              </li>
+              <input type="radio" name="radio-buttom" id="img-2" />
+              <li class="slide-container">
+                <div class="slide-image">
+                  <img src="./assets/imagens/imagem2.jpg" />
+                </div>
+                <div class="carousel-controls">
+                  <label for="img-1" class="prev-slide">
+                    <span>&lsaquo;</span>
+                  </label>
+                  <label for="img-3" class="next-slide">
+                    <span>&rsaquo;</span>
+                  </label>
+                </div>
+              </li>
+              <input type="radio" name="radio-buttom" id="img-3" />
+              <li class="slide-container">
+                <div class="slide-image">
+                  <img src="./assets/imagens/imagem3.jpg" />
+                </div>
+                <div class="carousel-controls">
+                  <label for="img-2" class="prev-slide">
+                    <span>&lsaquo;</span>
+                  </label>
+                  <label for="img-4" class="next-slide">
+                    <span>&rsaquo;</span>
+                  </label>
+                </div>
+              </li>
+              <input type="radio" name="radio-buttom" id="img-4" />
+              <li class="slide-container">
+                <div class="slide-image">
+                  <img src="./assets/imagens/imagem4.jpg" />
+                </div>
+                <div class="carousel-controls">
+                  <label for="img-3" class="prev-slide">
+                    <span>&lsaquo;</span>
+                  </label>
+                  <label for="img-5" class="next-slide">
+                    <span>&rsaquo;</span>
+                  </label>
+                </div>
+              </li>
+              <input type="radio" name="radio-buttom" id="img-5" />
+              <li class="slide-container">
+                <div class="slide-image">
+                  <img src="./assets/imagens/imagem5.jpg" />
+                </div>
+                <div class="carousel-controls">
+                  <label for="img-4" class="prev-slide">
+                    <span>&lsaquo;</span>
+                  </label>
+                  <label for="img-6" class="next-slide">
+                    <span>&rsaquo;</span>
+                  </label>
+                </div>
+              </li>
+              <input type="radio" name="radio-buttom" id="img-6" />
+              <li class="slide-container">
+                <div class="slide-image">
+                  <img src="./assets/imagens/imagem6.jpg" />
+                </div>
+                <div class="carousel-controls">
+                  <label for="img-5" class="prev-slide">
+                    <span>&lsaquo;</span>
+                  </label>
+                  <label for="img-1" class="next-slide">
+                    <span>&rsaquo;</span>
+                  </label>
+                </div>
+              </li>
+              <div class="carousel-dots">
+                <label for="img-1" class="carousel-dot" id="img-dot-1"></label>
+                <label for="img-2" class="carousel-dot" id="img-dot-2"></label>
+                <label for="img-3" class="carousel-dot" id="img-dot-3"></label>
+                <label for="img-4" class="carousel-dot" id="img-dot-4"></label>
+                <label for="img-5" class="carousel-dot" id="img-dot-5"></label>
+                <label for="img-6" class="carousel-dot" id="img-dot-6"></label>
+              </div>
+            </ul>
+          </div>
+        </section>
+
+        <div id="cadastro" class="conteudo-1">
+          <aside class="frase-principal-1">
+            <p>
+              Comer saudável não tem que ser chato ou sem graça. Nossa comida
+              deliciosa e nutritiva vai fazer você se sentir bem por dentro e
+              por fora. Trabalhamos com muito amor para que nossos clientes
+              tenham uma alimentação saudável e gostosa, prezamos para que a
+              comida seja entregue tudo nos conformes e quentinha.
+            </p>
+          </aside>
+          <figure class="imagem-conteudo">
+            <img
+              src="./assets/imagens/imagemconteudo2.jpg"
+              alt="imagem-conteudo-1"
+            />
+          </figure>
+          <form class="formulario">
+            <label>digite seu nome:</label>
+            <input id="nome-input" type="text" placeholder="nome" />
+
+            <label>digite seu e-mail:</label>
+            <input id="email-input" type="email" placeholder="email" />
+
+            <label>digite seu telefone:</label>
+            <input id="telefone-input" type="text" placeholder="telefone" />
+
+            <label>digite sua senha:</label>
+            <input id="senha-input" type="password" placeholder="senha" />
+            <button class="btn">Cadastrar</button>
+          </form>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container-footer">
+          <div class="row">
+            <div class="footer-col">
+              <h3>Suporte</h3>
+              <ul>
+                <li><a href="#cadastro">SAC</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h3>Apoie-nos</h3>
+              <ul>
+                <li><a href="#cadastro">Avaliação</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h3>Redes sociais</h3>
+              <div class="social-links">
+                <a target="_blank" href="https://www.instagram.com/" class="footer-link" id="instagram">
+                  <i class="fa-brands fa-instagram"></i>
+              <a target="_blank" href="https://www.facebook.com/" class="footer-link" id="facebook">
+                  <i class="fa-brands fa-facebook"></i>
+              <a target="_blank" href="https://web.whatsapp.com/" class="footer-link" id="whatsapp">
+                  <i class="fa-brands fa-whatsapp"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
     </section>
   </body>
-</html>;
+</html>
