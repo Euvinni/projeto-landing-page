@@ -1,91 +1,321 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: 0;
-}   
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
 
 section .container {
-    width: 100%;
-   
+  width: 100%;
+  object-fit: cover;
 }
 
 .menu {
-    align-items: center;
-    background-color: white;
-    display: flex;
-    justify-content: space-between;
-    height: 10vh;
-    padding: 2rem 0;
-    position: fixed;
-    width: 100%;
+  background-image: linear-gradient(to left, #614230, #e2ddda, #fff, #fff);
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  height: 5vh;
+  padding: 2rem 0;
 
+  width: 100%;
+}
+.cabecario ul {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  gap: 6rem;
+  list-style: none;
+  margin-right: 1.2rem;
 }
 
-.menu ul {
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-    margin-right: 2rem;
+.cabecario ul li {
+  position: relative;
+  list-style: none;
 }
 
-.menu li {
-    list-style: none;
-    margin-left: 30px;
+.cabecario ul li > a::after {
+  position: absolute;
+  content: "";
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: grey;
+  transition: width 0.4s;
+}
+
+.cabecario ul li > a:hover::after {
+  width: 100%;
+  height: 2px;
+  background: grey;
 }
 
 .menu a {
-    text-decoration: none;
-    color: black;
-    font-size: 1.5rem;
-    font-weight: 500;
-    cursor: pointer;
+  text-decoration: none;
+  color: black;
+  font-size: 1.5rem;
+  font-weight: 500;
+  cursor: pointer;
 }
 
 .logo {
-    height: 150px;
-    width: 150px;
-    object-fit: cover;
-    margin-left: 2rem;
+  height: 10vh;
+  width: 150px;
+  object-fit: cover;
+  margin-left: 2rem;
 }
 
 main .imagem-principal {
-    height: 55%;
-    width: 100%;
+  height: 55%;
+  width: 100%;
 }
 
-main .frase-principal {
-    font-size: 2.6rem;
-    font-weight: 500;
-    margin: 2rem 0;
-    text-align: center;
+main .frase-primaria {
+  font-size: 2.6rem;
+  font-family: sans-serif;
+  font-weight: 500;
+  margin: 5rem 0;
+  text-align: center;
 }
 
-main .carrossel{
-    display: grid;
-    padding: 10px;
-    gap: 300px;
-    grid-template-columns: repeat(auto-fit, 200px) ;
-    justify-content: center;
-    align-items: center;
-    margin: 100px;
-    
-}
-main .carrossel img {
-    width: 450px;
-    height: 400px;
-    
+ul.slides {
+  position: relative;
+  height: 800px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
-footer {
-    
-    background-color: black;
-    height: 150px;
+.slide-container {
+  display: block;
 }
 
-footer a {
-    align-items: center;
-    color: white;
-    text-decoration: none;
-    display: flex;
-    justify-content: center;
+ul.slides input {
+  display: none;
 }
+
+.slide-container {
+  display: block;
+}
+
+.slide-image {
+  display: block;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  opacity: 0;
+  transition: all 0.7s ease-in-out;
+}
+
+.slide-image img {
+  width: 100%;
+  height: 87vh;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+}
+
+.carousel-controls {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  font-size: 100px;
+  line-height: 800px;
+  color: black;
+}
+
+.carousel-controls label {
+  display: none;
+  position: absolute;
+  padding: 0 20px;
+  opacity: 0;
+  transition: opacity 0.2s;
+  cursor: pointer;
+}
+
+.slide-image:hover + .carousel-controls label {
+  opacity: 0.5;
+}
+
+.carousel-controls label:hover {
+  opacity: 1;
+}
+
+.carousel-controls .prev-slide {
+  width: 49%;
+  text-align: left;
+  left: 0;
+}
+
+.carousel-controls .next-slide {
+  width: 49%;
+  text-align: right;
+  right: 0;
+}
+
+.carousel-dots {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 20px;
+  z-index: 999;
+  text-align: center;
+}
+
+.carousel-dots .carousel-dot {
+  display: inline-block;
+  margin-bottom: -3rem;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: black;
+  opacity: 0.5;
+}
+
+input:checked + .slide-container .slide-image {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 1s ease-in-out;
+}
+
+input:checked + .slide-container .carousel-controls label {
+  display: block;
+}
+
+input#img-1:checked ~ .carousel-dots label#img-dot-1,
+input#img-2:checked ~ .carousel-dots label#img-dot-2,
+input#img-3:checked ~ .carousel-dots label#img-dot-3,
+input#img-4:checked ~ .carousel-dots label#img-dot-4,
+input#img-5:checked ~ .carousel-dots label#img-dot-5,
+input#img-6:checked ~ .carousel-dots label#img-dot-6 {
+  opacity: 1;
+}
+
+.frase-principal-1 {
+  font-size: 2rem;
+  font-family: sans-serif 50px;
+  font-weight: 500;
+  text-align: center;
+  width: 30%;
+  height: 50%;
+}
+
+.conteudo-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+  gap: 5rem;
+}
+
+.imagem-conteudo img {
+  width: 30rem;
+  height: 25rem;
+  object-fit: cover;
+  border-radius: 3%;
+}
+
+.formulario {
+  margin: 0 2rem;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  gap: 1rem;
+  background-color: lightgray;
+  border-radius: 20px;
+  box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+.formulario input {
+  width: 15rem;
+  height: 1.5rem;
+}
+
+.formulario label {
+  font-size: 20px;
+}
+
+::placeholder {
+  text-align: center;
+}
+
+.btn {
+  padding: 3%;
+  grid-column: 1 / span 2;
+  justify-self: center;
+  margin-top: 1rem;
+}
+
+.footer {
+  background-color: lightgray;
+  padding: 70px 0;
+}
+
+.container-footer {
+  max-width: 1200px;
+  margin: auto;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer-col {
+  width: 25%;
+  padding: 0 50px;
+}
+
+.footer-col h3 {
+  font-size: 18px;
+  color: black;
+  text-transform: uppercase;
+  margin-bottom: 1.2rem;
+}
+
+.footer-col ul li {
+  list-style: none;
+}
+
+.footer-col a {
+  font-size: 16px;
+  color: purple;
+  text-decoration: none;
+  display: block;
+  transition: all 0.2s ease;
+}
+
+.footer-col a:hover {
+  color: white;
+  padding-left: 10px;
+}
+.social-links {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.social-links .footer-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 50%;
+  transition: all 0.3s;
+  background-color: black;
+}
+
+.footer .footer-link:hover {
+  opacity: 0.8;
+}
+
+@media();
