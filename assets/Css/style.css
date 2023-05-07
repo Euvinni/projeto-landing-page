@@ -258,6 +258,7 @@ input#img-6:checked ~ .carousel-dots label#img-dot-6 {
 .footer {
   background-color: #e2ddda;
   padding: 70px 0;
+  height: 18vh;
 }
 
 .container-footer {
@@ -298,13 +299,6 @@ input#img-6:checked ~ .carousel-dots label#img-dot-6 {
   padding-left: 10px;
 }
 
-#copy {
-  padding: 1rem;
-  display: flex;
-  justify-content: center;
-  margin-top: 2rem;
-}
-
 .social-links {
   display: flex;
   gap: 2rem;
@@ -326,8 +320,10 @@ input#img-6:checked ~ .carousel-dots label#img-dot-6 {
   opacity: 0.8;
 }
 
-.footer-dev span {
-  text-decoration: none;
+#copy {
+  display: flex;
+  justify-content: center;
+  margin-top: 6rem;
 }
 
 @media screen and (min-width: 800px) and (max-width: 1280px) {
@@ -367,11 +363,15 @@ input#img-6:checked ~ .carousel-dots label#img-dot-6 {
     border-radius: 20px;
     box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.5);
   }
+
+  .footer {
+    height: 25vh;
+  }
+
   #copy {
-    padding: 1rem;
     display: flex;
     justify-content: center;
-    margin-top: 7rem;
+    margin-top: 10rem;
   }
 }
 
@@ -462,17 +462,32 @@ input#img-6:checked ~ .carousel-dots label#img-dot-6 {
   }
 
   .footer-col h3 {
-    font-size: 25px;
+    font-size: 35px;
     color: black;
     text-transform: uppercase;
     margin-bottom: 1.2rem;
   }
   .footer-col a {
-    font-size: 24px;
+    font-size: 30px;
     color: purple;
     text-decoration: none;
     display: block;
     transition: all 0.2s ease;
+  }
+
+  .social-links .footer-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3.5rem;
+    width: 3.5rem;
+    border-radius: 50%;
+    transition: all 0.3s;
+    background-color: black;
+  }
+
+  .footer {
+    height: 45vh;
   }
 
   #copy {
@@ -480,16 +495,5 @@ input#img-6:checked ~ .carousel-dots label#img-dot-6 {
     display: flex;
     justify-content: center;
     margin-top: 15rem;
-  }
-
-  .social-links .footer-link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 2.5rem;
-    width: 2.5rem;
-    border-radius: 50%;
-    transition: all 0.3s;
-    background-color: black;
   }
 }

@@ -13,13 +13,13 @@ buttonInput.addEventListener("click", function (event){
     event.preventDefault()
 
     if(nameInput.value === ""){
-        alert("FAVOR PREENCHER O CAMPO: NOME")
+        alert("Favor preencher o campo: NOME")
     }else if(emailInput.value === ""){
-        alert("FAVOR PREENCHER O CAMPO: EMAIL")
+        alert("Favor preencher o campo: EMAIL")
     }else if (telefoneInput.value === ""){
-        alert("FAVOR PREENCHER O CAMPO: TELEFONE")
+        alert("Favor preencher o campo: TELEFONE")
     }else if (telefoneInput.value === ""){
-        alert("FAVOR PREENCHER O CAMPO: SENHA")
+        alert("Favor preencher o campo: SENHA")
     }else {
         alert("Cadastrado")
     }
