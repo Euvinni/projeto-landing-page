@@ -18,7 +18,7 @@ buttonInput.addEventListener("click", function (event){
         alert("Favor preencher o campo: EMAIL")
     }else if (telefoneInput.value === ""){
         alert("Favor preencher o campo: TELEFONE")
-    }else if (telefoneInput.value === ""){
+    }else if (senhaInput.value === ""){
         alert("Favor preencher o campo: SENHA")
     }else {
         alert("Cadastrado")
